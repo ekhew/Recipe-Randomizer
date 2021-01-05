@@ -1,0 +1,22 @@
+Meat Dishes
+   
+Fried Fish {fish, salty, pepper, spices}   
+Steak {beef, salt, pepper}   
+
+.
+
+Vegetable Dishes
+   
+Broccoli {broccoli, salt, pepper}   
+Cabbage {cabbage, soy sauce, pepper}   
+Celery {celery, salt, pepper}   
+
+.
+
+Soup Dishes
+   
+Dumpling Soup {meat, wrap, salt}   
+Vegetable Soup {carrots, potatoes, tomatoes}   
+Spinach Soup {spinach, salt}   
+
+.
