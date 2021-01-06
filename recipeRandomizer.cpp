@@ -130,22 +130,57 @@ void addRecipe(){
         cout << endl << "Enter recipe name: ";
         getline(cin, newName);
 
-        cout << "Enter ingredients: ";
-        getline(cin, ingredients);
-
-        //creates a new string with the user specified dish name and ingredients
-        newDish = newName + " {" + ingredients + "}";
-
-        //add the new dish to the end of the vector based on category specified by the user
+        //performs action based on user input for dish category and dish name
         if(category == "meat"){
-            meatDishes.push_back(newDish);
+            //loop through the vector and see if a dish with the name inputed by the user already exists
+            for(int i = 0; i < meatDishes.size(); i++){
+                recipeFound = meatDishes[i].find(newName);
+                if(recipeFound != string::npos){
+                        recipeFoundBool = true;
+                        cout << endl << "Oops! Dish already exists." << endl << endl;
+                }
+            }
+            //if the name does not already exist, proceed to ask the user for the ingredients and add the new dish
+            if(recipeFoundBool == false){
+                cout << "Enter ingredients: ";
+                getline(cin, ingredients);
+                //creates a new string with the user specified dish name and ingredients
+                newDish = newName + " {" + ingredients + "}";
+                meatDishes.push_back(newDish);
+                cout << endl << "Oops! Dish successfully added." << endl << endl;
+            }
         } else if(category == "vegetable"){
-            vegetableDishes.push_back(newDish);
+            for(int i = 0; i < vegetableDishes.size(); i++){
+                recipeFound = vegetableDishes[i].find(newName);
+                if(recipeFound != string::npos){
+                        recipeFoundBool = true;
+                        cout << endl << "Oops! Dish already exists." << endl << endl;
+                }
+            }
+            if(recipeFoundBool == false){
+                cout << "Enter ingredients: ";
+                getline(cin, ingredients);
+                newDish = newName + " {" + ingredients + "}";
+                vegetableDishes.push_back(newDish);
+                cout << endl << "Dish successfully added." << endl << endl;
+            }
         } else if(category == "soup"){
-            soupDishes.push_back(newDish);
+            for(int i = 0; i < soupDishes.size(); i++){
+                recipeFound = soupDishes[i].find(newName);
+                if(recipeFound != string::npos){
+                        recipeFoundBool = true;
+                        cout << endl << "Dish already exists." << endl << endl;
+                }
+            }
+            if(recipeFoundBool == false){
+                cout << "Enter ingredients: ";
+                getline(cin, ingredients);
+                newDish = newName + " {" + ingredients + "}";
+                soupDishes.push_back(newDish);
+                cout << endl << "Dish successfully added." << endl << endl;
+            }
         }
 
-        cout << endl << "Dish successfully added." << endl << endl;
     } else if(choice == "delete"){
         //user enters the category of the new dish they wish to delete
         while(category != "meat" && category != "vegetable" && category != "soup"){
