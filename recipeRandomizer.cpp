@@ -7,8 +7,6 @@
 
 using namespace std;
 
-//test
-
 //this function is used to see every dish belonging to a user specified category
 void seeDishes(){
 
