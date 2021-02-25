@@ -6,5 +6,5 @@ I was inspired to make this program by my mom, who has a large cook book contain
 - Adding and removing dishes
 - Search for specific dishes
 - View all ingredients of a dish
-- View all dishes of a certain category (meat, vegetable, soup)
+- View all dishes of a certain category (meat, vegetable, or soup)
 - Create a randomized meal containing a dish from each category
